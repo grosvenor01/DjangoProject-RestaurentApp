@@ -1,0 +1,35 @@
+{% load static %}
+<link rel="stylesheet" href="/{% static '../../static/css/style.css' %}">
+   <!-- fOOD MEnu Section Starts Here -->
+    <section class="food-menu">
+        <div class="container">
+            <h2 class="text-center">Food Menu</h2>
+            {% for x in fd %}
+            <div class="food-menu-box">
+                <div class="food-menu-img">
+                    <img src="{{ x.food_pic.url }}" alt="Chicke Hawain Pizza" class="img-responsive img-curve">
+                </div>
+
+                <div class="food-menu-desc">
+                    <h4> {{x.name}} </h4>
+                    <p class="food-price"> {{x.price}}$</p>
+                    <p class="food-detail">
+                        {{x.description}}
+                    </p>
+                    <br>
+
+                    <a href="{% url 'order' x.id %}" class="btn btn-primary">Order Now</a>
+                </div>
+            </div>
+            {% endfor %}
+            <div class="clearfix"></div>
+
+            
+
+        </div>
+
+        <p class="text-center">
+            <a href="#">See All Foods</a>
+        </p>
+    </section>
+    <!-- fOOD Menu Section Ends Here -->

@@ -1,0 +1,20 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="/{% static 'static/css/style.css' %}">
+    <!-- CAtegories Section Starts Here -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="text-center">Explore Foods</h2>
+            {% for x in fd %}
+            <a href="/category_food">
+            <div class="box-3 float-container">
+                <img src="{{x.food_pic.url}}"  height="260px" width="300px" alt="{{x.name}}" class="img-responsive img-curve">
+
+                <h3 class="float-text text-white">{{x.name}}</h3>
+            </div>
+            </a>
+            {% endfor %}
+            <div class="clearfix"></div>
+        </div>
+    </section>
+    <!-- Categories Section Ends Here -->

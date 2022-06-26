@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Important to make website responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Website</title>
+
+    <!-- Link our CSS file -->
+    <link rel="stylesheet" href="/{% static '../../static/css/style.css' %} ">
+</head>
+
+{% include 'parts/nav.html' %}
+
+{% block content %}
+
+{% endblock %}
+
+{% include 'parts/social.html'%}
+{% include 'parts/footer.html'%}
